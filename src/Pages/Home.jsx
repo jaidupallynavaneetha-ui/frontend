@@ -1,5 +1,15 @@
 
-import { useState,useEffect } from 'react'
+/**
+ * Home Page Component
+ * Displays list of all products
+ */
+import { useState, useEffect } from 'react';
+import ProductCard from '../components/ProductCard';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorMessage from '../components/ErrorMessage';
+import { productApi } from '../utils/api';
+import { LAYOUT_STYLES } from '../utils/constants';
+
 function Home() {
 
 const [product, setproduct] = useState([])
